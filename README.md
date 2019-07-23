@@ -4,7 +4,7 @@ The software was written using Arduino, with the help of some esp32 native libra
 
 ## Hardware
 
-The hardware schematic is [link](/schematic.pdf "here")
+The hardware schematic is [here](/schematic.pdf "here").
 
 It is similar to an Adafruit Feather, used in early prototyping. The additions are a TFT LCD screen, five buttons, seven LEDs and the SAO port for expansion. The esp32 communicates with the screen using SPI. The board incorporates a charging circuit for a LIPO battery (provided with the badge).
 
