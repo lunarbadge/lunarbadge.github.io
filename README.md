@@ -1,5 +1,7 @@
 # Lunar Lander Badge
 
+![BadgeSAO](/images/withSAO.png "Lunar Lander Badge with SAO attached")
+
 The software was written using Arduino, with the help of some esp32 native libraries where needed. The esp32 libraries are based on FreeRTOS.
 
 ## Hardware
@@ -11,6 +13,50 @@ It is similar to an Adafruit Feather, used in early prototyping. The additions a
 The code uses BLE (Bluetooth Low Energy) from the esp32, but not WiFi (though it's not blocked).
 
 The hardware pinouts are defined in hardware.h. Four of the defined pins are not currently in use but are connected to the SAO port. The I2C connections (SDA / SCL) used for the SAO do not have additional pull-up resistors on the board, so may work best with SAOs that include their own resistors. Since the current software doesn't use I2C it is available for use with SAOs that support serial. There are two additional GPIO pins connected to the SAO.
+
+### First look
+
+#### SAO connector
+If you are soldering on a SAO connector, the tab must be at the front, as shown in the silkscreen.  This is a keyed connector.
+
+![SAO1](/images/SAO1.png "SAO silkscreen")
+
+It should look like this when assembled:
+
+![SAO2](/images/SAO2.png "SAO attached to badge")
+
+Some tarnish on the silver is normal.  It is due to the manufacturing process.
+
+#### Attaching the battery
+
+Batteries ship separately, and are not fully charged.  The badge has a built-in LIPO charger, so you can connect the battery to charge it.  The badge starts working when the charge is 3.2V (nominal LIPO battery voltage is 3.7V; it is usually in the range 3.2 - 4.2V).
+
+The battery is attached using double-sided tape (included).
+
+Connect the battery (make sure the connector is the correct way up; the red wire is closer to the edge of the board).
+
+![BadgeTape](/images/tape.png "tape and battery connections")
+
+Cut the tape into two strips as shown. 
+
+Remove one side of the paper covering the tape, and attach the tape to the battery.
+
+![BadgeTape2](/images/BatteryTape.png "Battery ready to attach to badge")
+
+Remove the other side of the tape, then carefully place the battery on the badge.  The tape should not be on the screen connector.  
+
+Don’t press too hard because you could damage the screen.
+
+There will be space between the battery and the badge; this is by design.
+
+![BadgeSandwich](!/images/sandwich.png "space between badge and battery")
+
+If the battery is low there is a warning:
+
+![BatteryWarning](!/images/batteryWarning.png "Battery Warning")
+
+#### Screen Cover
+The screen is shipped with a thin film covering it.  You’ll find the display looks better without it.
 
 ## Software
 The software is mostly written in C++. We pre-compute values where possible to avoid complex calculations.
