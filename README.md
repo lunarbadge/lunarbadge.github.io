@@ -2,19 +2,7 @@
 
 ![BadgeSAO](/images/withSAO.png "Lunar Lander Badge with SAO attached")
 
-The software was written using Arduino, with the help of some esp32 native libraries where needed. The esp32 libraries are based on FreeRTOS.
-
-## Hardware
-
-The hardware schematic is [here](/schematic.pdf "here").
-
-It is similar to an Adafruit Feather, used in early prototyping. The additions are a TFT LCD screen, five buttons, seven LEDs and the SAO port for expansion. The esp32 communicates with the screen using SPI. The board incorporates a charging circuit for a LIPO battery (provided with the badge).
-
-The code uses BLE (Bluetooth Low Energy) from the esp32, but not WiFi (though it's not blocked).
-
-The hardware pinouts are defined in hardware.h. Four of the defined pins are not currently in use but are connected to the SAO port. The I2C connections (SDA / SCL) used for the SAO do not have additional pull-up resistors on the board, so may work best with SAOs that include their own resistors. Since the current software doesn't use I2C it is available for use with SAOs that support serial. There are two additional GPIO pins connected to the SAO.
-
-### First look
+## First look
 
 #### SAO connector
 If you are soldering on a SAO connector, the tab must be at the front, as shown in the silkscreen.  This is a keyed connector.
@@ -57,6 +45,18 @@ If the battery is low there is a warning:
 
 #### Screen Cover
 The screen is shipped with a thin film covering it.  You’ll find the display looks better without it.
+
+The software was written using Arduino, with the help of some esp32 native libraries where needed. The esp32 libraries are based on FreeRTOS.
+
+## Hardware
+
+The hardware schematic is [here](/schematic.pdf "here").
+
+It is similar to an Adafruit Feather, used in early prototyping. The additions are a TFT LCD screen, five buttons, seven LEDs and the SAO port for expansion. The esp32 communicates with the screen using SPI. The board incorporates a charging circuit for a LIPO battery (provided with the badge).
+
+The code uses BLE (Bluetooth Low Energy) from the esp32, but not WiFi (though it's not blocked).
+
+The hardware pinouts are defined in hardware.h. Four of the defined pins are not currently in use but are connected to the SAO port. The I2C connections (SDA / SCL) used for the SAO do not have additional pull-up resistors on the board, so may work best with SAOs that include their own resistors. Since the current software doesn't use I2C it is available for use with SAOs that support serial. There are two additional GPIO pins connected to the SAO.
 
 ## Software
 The software is mostly written in C++. We pre-compute values where possible to avoid complex calculations.
