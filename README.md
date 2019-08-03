@@ -2,6 +2,8 @@
 
 ![BadgeSAO](/images/withSAO.png "Lunar Lander Badge with SAO attached")
 
+Looking for the [Lunar Lander SAO](https://github.com/lunarbadge/LunarLanderSAO)?
+
 ## First look
 
 #### SAO connector
