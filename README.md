@@ -6,4 +6,3 @@ The Lunar Lander Badge team have two projects for DEF CON 27: a [badge](https://
 
 We chose the theme to commemorate the 50th anniversary of the first moon landing, Apollo 11 in July 1969.  We look back at the Apollo missions as a time of optimism for engineers and scientists working to build technology's promise (DEF CON 27 theme).
 
-
